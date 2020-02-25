@@ -299,6 +299,10 @@ label {
   text-align: center;
 }
 
+.primary {
+  color: var(--primary);
+}
+
 .splash {
   --alpha: 4rem;
   --beta: 3rem;
