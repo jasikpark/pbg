@@ -1,0 +1,27 @@
+{{ define "title" }}{{ .Title }} ﹒ {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<header>
+    <h1>{{ .Title }}</h1>
+</header>
+{{ .Content }}
+<div class=""></div>
+{{ range .Pages }}
+
+<section>
+    <figure>
+        <img {{ with .Resources }} {{ with .GetMatch "{*.*,*.jpg,*.png,*.jpeg,*.JPG,*.PNG,*.JPEG}" }}
+            src='{{ .Permalink }}' {{ end }} {{ end }} {{ with .Params.ImgAlt }}alt="{{ . }}" {{ end }}
+            {{ with .Params.ImgTitle }}title="{{ . }}" {{ end }} />
+        <figcaption>
+            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+
+            <p>{{ .Description }}</p>
+
+        </figcaption>
+    </figure>
+</section>
+{{ end }}
+</div>
+
+{{ end }}
