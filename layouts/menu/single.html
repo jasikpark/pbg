@@ -1,0 +1,30 @@
+{{ define "title" }}{{ .Title }} ﹒ {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<header>
+    <h1>{{ .Title }}</h1>
+</header>
+<section>
+    {{ .Content }}
+
+    <figure>
+        <img {{ with .Resources }} {{ with .GetMatch "{*.*,*.jpg,*.png,*.jpeg,*.JPG,*.PNG,*.JPEG}" }}
+            src='{{ .Permalink }}' {{ end }} {{ end }} {{ with .Params.ImgAlt }}alt="{{ . }}" {{ end }}
+            {{ with .Params.ImgTitle }}title="{{ . }}" {{ end }} />
+        <figcaption>
+            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+
+            <p>{{ .Description }}</p>
+
+        </figcaption>
+    </figure>
+
+    <div>
+        <p>cost: {{ .Params.Cost }}</p>
+    </div>
+    <div>
+        <h2 style="color:red">Nutritional Facts</h2>
+        <p>To be created</p>
+    </div>
+</section>
+{{ end }}
