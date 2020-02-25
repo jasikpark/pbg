@@ -9,9 +9,3 @@ We’d love to get in touch with you and hear your ideas and questions. We striv
 ### How can I get…?
 
 You can also use the form below for any inquiries about bakery item availability, monthly subscriptions and scheduling a 1-on-1 session with our baker. Don’t be shy, drop us a line!
-Location
-
-Cypress, Texas
-Working hours
-
-Monday – Saturday: 9AM – 7PM We’re closed on Sundays
