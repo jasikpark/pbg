@@ -3,5 +3,16 @@
 {{ define "main" }}
 {{ .Content }}
 
+<div class="flex limit">
+    <div class="w-1/2">
+        <h3>Location</h3>
+        <p>Cypress, Texas</p>
+    </div>
+    <div class="w-1/2">
+        <h3>Working hours</h3>
+        <p>Monday – Saturday: 9AM – 7PM We’re closed on Sundays</p>
+    </div>
+</div>
+
 {{ partial "contact-form.html" . }}
 {{ end }}
