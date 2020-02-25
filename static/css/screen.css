@@ -1,0 +1,148 @@
+:root {
+  --max-width: 36rem;
+  --font-small: 0.8rem;
+  --font-med: 0.9rem;
+  --alpha: 80px;
+  --beta: 66px;
+  --gamma: 28px;
+  --primary: #7b0cd1;
+  --highlight: #e4cef5;
+  --white: #fff;
+  --off-white: #fffdfc;
+  --grey-1: #f5f3f2;
+  --grey-2: #ebe7e6;
+  --grey-3: #595756;
+  --grey-4: #424040;
+  --black: #2b2523;
+  --serif: "Avenir Next", "nunito-sans", sans-serif;
+  --mono: "monaco", "source-code-pro", monospace;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  margin: 0;
+  padding: 0 1rem;
+  font-family: var(--mono);
+  color: var(--black);
+  line-height: 1.4;
+}
+
+h1 {
+  font-weight: 900;
+  letter-spacing: 0.53px;
+}
+
+h2 {
+  letter-spacing: 0.63px;
+  color: var(--grey-3);
+}
+
+h3 {
+  font-weight: initial;
+  font-family: var(--mono);
+  color: var(--grey-3);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+blockquote,
+hr,
+time,
+footer,
+.limit {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  font-feature-settings: "onum", "ss02";
+}
+
+a {
+  color: var(--black);
+  text-decoration-color: var(--grey-3);
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  color: var(--grey-2);
+  text-decoration-color: var(--grey-2);
+}
+
+body > header a {
+  text-decoration: none;
+}
+
+body > header h1 {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+body > header ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+body > header li {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+body > header * {
+  font-size: var(--font-med);
+  line-height: 1.4;
+  color: var(--white);
+  font-family: var(--serif);
+  padding: auto 1em;
+}
+
+body > header {
+  background-color: var(--primary);
+  margin: 0 -1rem;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.splash {
+  --alpha: 4rem;
+  --beta: 3rem;
+  --gamma: 2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.splash h1,
+.splash h2,
+.splash h3 {
+  text-align: center;
+  font-family: var(--serif);
+}
+
+.splash h1 {
+  font-size: var(--alpha);
+}
+
+.splash h2 {
+  font-size: var(--beta);
+  color: var(--primary);
+}
+
+.splash h3 {
+  font-size: var(--gamma);
+  color: var(--primary);
+}
