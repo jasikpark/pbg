@@ -302,6 +302,11 @@ label {
   margin-bottom: 0.5rem;
 }
 
+.my-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
 .flex {
   display: flex;
 }
@@ -312,6 +317,18 @@ label {
 
 .primary {
   color: var(--primary);
+}
+
+.text-sm {
+  font-size: var(--font-small);
+}
+
+.text-base {
+  font-size: var(--font-medium);
+}
+
+.text-lg {
+  font-size: 1rem;
 }
 
 .splash {
@@ -345,6 +362,11 @@ label {
   color: var(--primary);
   font-weight: initial;
   font-family: var(--mono);
+}
+
+.cost-container {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 a:focus,
