@@ -99,6 +99,7 @@ body > header a {
 body > header h1 {
   font-size: 1rem;
   margin-bottom: 0;
+  font-weight: 700;
 }
 
 body > header ul {
