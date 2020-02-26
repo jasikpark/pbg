@@ -10,9 +10,10 @@
 
 <section>
     <figure>
-        <img {{ with .Resources }} {{ with .GetMatch "{*.*,*.jpg,*.png,*.jpeg,*.JPG,*.PNG,*.JPEG}" }}
-            src='{{ .Permalink }}' {{ end }} {{ end }} {{ with .Params.ImgAlt }}alt="{{ . }}" {{ end }}
-            {{ with .Params.ImgTitle }}title="{{ . }}" {{ end }} />
+        <a href="{{ .Permalink }}"><img {{ with .Resources }}
+                {{ with .GetMatch "{*.*,*.jpg,*.png,*.jpeg,*.JPG,*.PNG,*.JPEG}" }} src='{{ .Permalink }}' {{ end }}
+                {{ end }} {{ with .Params.ImgAlt }}alt="{{ . }}" {{ end }} {{ with .Params.ImgTitle }}title="{{ . }}"
+                {{ end }} /></a>
         <figcaption>
             <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
 
