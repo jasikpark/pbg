@@ -131,6 +131,16 @@ body > header {
   z-index: 999;
 }
 
+footer {
+  margin: 2rem auto;
+  font-size: var(--font-small);
+  line-height: 1.6;
+}
+footer a {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
 figure {
   margin: 5rem auto;
   max-width: calc(10rem + var(--max-width));
