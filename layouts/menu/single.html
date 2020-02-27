@@ -21,7 +21,11 @@
     </figure>
 
     <div>
-        <p>cost: {{ .Params.Cost }}</p>
+        <p class="cost-container">
+            {{ with .Params.Cost }}<span class="text-base tx-1">{{ . }}</span>{{ end }}
+            {{ with .Params.CostPerDozen }}<span class="text-base tx-1">{{ . }}</span>{{ end }}
+            {{ with .Params.CostPerHalfDozen }}<span class="text-base tx-1">{{ . }}</span>{{ end }}
+        </p>
     </div>
     <div>
         <h2 style="color:red">Nutritional Facts</h2>
