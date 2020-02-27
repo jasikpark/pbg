@@ -1,3 +1,5 @@
 baseURL = "https://pastriesbygrey.netlify.com"
 languageCode = "en-us"
 title = "Pastries By Grey"
+
+menu_group = "pastry"

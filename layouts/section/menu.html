@@ -5,25 +5,33 @@
     <h1>{{ .Title }}</h1>
 </header>
 {{ .Content }}
-<div class=""></div>
-{{ range .Pages }}
 
+{{ range (.Pages.GroupByParam "menu_group") }}
 <section>
-    <figure>
-        <a href="{{ .Permalink }}"><img {{ with .Resources }}
-                {{ with .GetMatch "{*.*,*.jpg,*.png,*.jpeg,*.JPG,*.PNG,*.JPEG}" }} src='{{ .Permalink }}' {{ end }}
-                {{ end }} {{ with .Params.ImgAlt }}alt="{{ . }}" {{ end }} {{ with .Params.ImgTitle }}title="{{ . }}"
-                {{ end }} /></a>
-        <figcaption>
-            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-
-            <p>{{ .Description }}</p>
-            <p>{{ .Params.Cost }}</p>
-
-        </figcaption>
-    </figure>
+    <h2>{{ .Key | title }}</h2>
+    {{ range .Pages }}
+    <section class="my-16">
+        <h3 class="tc"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        {{ if .Resources }}
+        <figure>
+            <a href="{{ .Permalink }}"><img {{ with .Resources }}
+                    {{ with .GetMatch "{*.*,*.jpg,*.png,*.jpeg,*.JPG,*.PNG,*.JPEG}" }} src='{{ .Permalink }}' {{ end }}
+                    {{ end }} {{ with .Params.ImgAlt }}alt="{{ . }}" {{ end }}
+                    {{ with .Params.ImgTitle }}title="{{ . }}" {{ end }} /></a>
+            <figcaption>
+                <p class="tc">{{ .Params.FigCaption }}</p>
+            </figcaption>
+        </figure>
+        {{ end }}
+        <p class="tc">{{ .Description }}</p>
+        <p class="cost-container">
+            {{ with .Params.Cost }}<span class="text-base tx-1">{{ . }}</span>{{ end }}
+            {{ with .Params.CostPerDozen }}<span class="text-base tx-1">{{ . }}</span>{{ end }}
+            {{ with .Params.CostPerHalfDozen }}<span class="text-base tx-1">{{ . }}</span>{{ end }}
+        </p>
+    </section>
+    {{ end }}
 </section>
 {{ end }}
-</div>
 
 {{ end }}
