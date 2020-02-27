@@ -97,7 +97,6 @@ body > header a {
 }
 
 body > header h1 {
-  font-size: 1rem;
   margin-bottom: 0;
   font-weight: 700;
 }
@@ -114,7 +113,7 @@ body > header li {
 }
 
 body > header * {
-  font-size: var(--font-med);
+  font-size: 1.1rem;
   line-height: 1.4;
   color: var(--white);
   font-family: var(--serif);
@@ -332,13 +331,24 @@ label {
 }
 
 .splash {
-  --alpha: 4rem;
-  --beta: 3rem;
-  --gamma: 1.7rem;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
+}
+
+.splash {
+  --alpha: 3rem;
+  --beta: 2.25;
+  --gamma: 1.27;
+}
+
+@media all and (min-width: 480px) {
+  .splash {
+    --alpha: 4rem;
+    --beta: 3rem;
+    --gamma: 1.7rem;
+  }
 }
 
 .splash h1,
