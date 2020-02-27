@@ -47,11 +47,13 @@ body {
 h1 {
   font-weight: 900;
   letter-spacing: 0.53px;
+  font-family: var(--serif);
 }
 
 h2 {
   letter-spacing: 0.63px;
   color: var(--grey-3);
+  font-family: var(--serif);
 }
 
 h3 {
