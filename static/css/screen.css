@@ -48,21 +48,21 @@ h1 {
   font-weight: 900;
   letter-spacing: 0.53px;
   font-family: var(--serif);
-  scroll-margin-top: 8rem;
+  scroll-margin-top: 10rem;
 }
 
 h2 {
   letter-spacing: 0.63px;
   color: var(--grey-3);
   font-family: var(--serif);
-  scroll-margin-top: 8rem;
+  scroll-margin-top: 10rem;
 }
 
 h3 {
   font-weight: initial;
   font-family: var(--mono);
   color: var(--grey-3);
-  scroll-margin-top: 8rem;
+  scroll-margin-top: 10rem;
 }
 
 h1,
@@ -113,13 +113,13 @@ body > header ul {
   margin-bottom: 0.5rem;
 }
 
-body > header ul:last-child {
-  margin-bottom: 1.5rem;
-}
-
 body > header li {
   display: inline-block;
   margin-right: 0.5em;
+}
+
+body > header nav {
+  margin: 1rem auto;
 }
 
 body > header * {
@@ -127,7 +127,6 @@ body > header * {
   line-height: 1.4;
   color: var(--white);
   font-family: var(--serif);
-  padding: auto 1em;
 }
 
 body > header {
@@ -138,6 +137,12 @@ body > header {
   position: sticky;
   top: 0;
   z-index: 999;
+}
+
+@media all and (max-width: 480px) {
+  .hidden-on-mobile {
+    display: none;
+  }
 }
 
 footer {

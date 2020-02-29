@@ -1,7 +1,7 @@
 {{ define "title" }}{{ .Title }} ﹒ {{ .Site.Title }}{{ end }}
 
 {{ define "menu" }}
-<ul>
+<ul class="hidden-on-mobile">
     {{ range (.Pages.GroupByParam "menu_group") }}
     <li><a href="#{{ .Key }}">{{ .Key | title }}</a></li>
     {{ end }}
