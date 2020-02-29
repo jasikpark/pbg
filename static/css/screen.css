@@ -7,6 +7,7 @@
   --gamma: 28px;
   --primary: #7b0cd1;
   --highlight: #e4cef5;
+  --highlight-complement: #1d0029;
   --white: #fff;
   --off-white: #fffdfc;
   --grey-1: #f5f3f2;
@@ -430,6 +431,10 @@ label {
   background-color: var(--highlight);
   margin: 0 -1rem;
   padding: 1rem 0;
+}
+
+.about * {
+  color: var(--highlight-complement);
 }
 
 .cost-container {
