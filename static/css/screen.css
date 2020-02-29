@@ -115,7 +115,16 @@ body > header ul {
 
 body > header ul:last-child {
   margin-bottom: 1.5rem;
+  display: hidden;
 }
+
+@media all and (min-width: 480px) {
+  body > header ul:last-child {
+    display: border-box;
+  }
+}
+
+
 
 body > header li {
   display: inline-block;
