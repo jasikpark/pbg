@@ -48,18 +48,21 @@ h1 {
   font-weight: 900;
   letter-spacing: 0.53px;
   font-family: var(--serif);
+  scroll-margin-top: 8rem;
 }
 
 h2 {
   letter-spacing: 0.63px;
   color: var(--grey-3);
   font-family: var(--serif);
+  scroll-margin-top: 8rem;
 }
 
 h3 {
   font-weight: initial;
   font-family: var(--mono);
   color: var(--grey-3);
+  scroll-margin-top: 8rem;
 }
 
 h1,
@@ -109,6 +112,10 @@ body > header ul {
   margin-top: 0;
 }
 
+body > header ul:nth-child(2) {
+  margin-bottom: 0;
+}
+
 body > header li {
   display: inline-block;
   margin-right: 0.5em;
@@ -126,7 +133,7 @@ body > header {
   background-color: var(--primary);
   margin: 0 -1rem;
   padding: 0.25rem 0.5rem;
-  text-align: center;
+  text-align: left;
   position: sticky;
   top: 0;
   z-index: 999;

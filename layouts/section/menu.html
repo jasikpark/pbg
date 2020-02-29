@@ -1,5 +1,13 @@
 {{ define "title" }}{{ .Title }} ﹒ {{ .Site.Title }}{{ end }}
 
+{{ define "menu" }}
+<ul>
+    {{ range (.Pages.GroupByParam "menu_group") }}
+    <li><a href="/menu#{{ .Key }}">{{ .Key | title }}</a></li>
+    {{ end }}
+</ul>
+{{ end }}
+
 {{ define "main" }}
 <header>
     <h1>{{ .Title }}</h1>
@@ -8,7 +16,7 @@
 
 {{ range (.Pages.GroupByParam "menu_group") }}
 <section>
-    <h2>{{ .Key | title }}</h2>
+    <h2 id="{{ .Key }}">{{ .Key | title }}</h2>
     {{ range .Pages }}
     <section class="my-16">
         <h3 class="tc"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
