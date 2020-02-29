@@ -155,6 +155,15 @@ footer a {
   margin-right: 0.5em;
 }
 
+main p,
+main ol,
+main ul,
+blockquote {
+  font-family: var(--serif);
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
 figure {
   margin: 5rem auto;
   max-width: calc(10rem + var(--max-width));
@@ -166,6 +175,17 @@ figure figcaption {
   margin-top: 0.25rem;
   font-size: var(--font-small);
   color: var(--grey-3);
+}
+
+blockquote {
+  border-left: 2px solid var(--grey-2);
+  font-family: var(--sans);
+  font-size: var(--font-med);
+  color: #666;
+  padding-left: 1.5rem;
+}
+blockquote p {
+  font-family: var(--sans);
 }
 
 button,
