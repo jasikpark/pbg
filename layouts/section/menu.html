@@ -3,7 +3,7 @@
 {{ define "menu" }}
 <ul>
     {{ range (.Pages.GroupByParam "menu_group") }}
-    <li><a href="/menu#{{ .Key }}">{{ .Key | title }}</a></li>
+    <li><a href="#{{ .Key }}">{{ .Key | title }}</a></li>
     {{ end }}
 </ul>
 {{ end }}
