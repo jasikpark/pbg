@@ -386,7 +386,7 @@ label {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 0 auto 3rem;
 }
 
 .splash {
@@ -424,6 +424,12 @@ label {
   color: var(--primary);
   font-weight: initial;
   font-family: var(--mono);
+}
+
+.about {
+  background-color: var(--highlight);
+  margin: 0 -1rem;
+  padding: 1rem 0;
 }
 
 .cost-container {
