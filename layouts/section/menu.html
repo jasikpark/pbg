@@ -30,6 +30,7 @@
                     {{ end }} {{ with .Params.ImgAlt }}alt="{{ . }}" {{ end }}
                     {{ with .Params.ImgTitle }}title="{{ . }}" {{ end }} /></a>
             <figcaption>
+                <p class="tc">{{ .Title }}</p>
                 <p class="tc">{{ .Params.FigCaption }}</p>
             </figcaption>
             {{ end }}
