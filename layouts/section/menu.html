@@ -2,8 +2,8 @@
 
 {{ define "menu" }}
 <ul class="hidden-on-mobile">
-    {{ range (.Pages.GroupByParam "menu_group") }}
-    <li><a href="#{{ .Key }}">{{ .Key | title }}</a></li>
+    {{ range ($.Site.GetPage "taxonomyTerm" "menu_group").Pages }}
+    <li><a href="#{{ .Title }}">{{ .Title | title }}</a></li>
     {{ end }}
 </ul>
 {{ end }}

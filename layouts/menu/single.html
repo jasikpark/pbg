@@ -1,5 +1,13 @@
 {{ define "title" }}{{ .Title }} ﹒ {{ .Site.Title }}{{ end }}
 
+{{ define "menu" }}
+<ul class="hidden-on-mobile">
+    {{ range ($.Site.GetPage "taxonomyTerm" "menu_group").Pages }}
+    <li><a href="/menu/#{{ .Title }}">{{ .Title | title }}</a></li>
+    {{ end }}
+</ul>
+{{ end }}
+
 {{ define "main" }}
 <header>
     <h1>{{ .Title }}</h1>

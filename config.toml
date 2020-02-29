@@ -3,3 +3,6 @@ languageCode = "en-us"
 title = "Pastries By Grey"
 
 menu_group = "pastry"
+
+[taxonomies]
+menu_group = "menu_group"
