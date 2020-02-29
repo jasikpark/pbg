@@ -12,6 +12,9 @@
 <header>
     <h1>{{ .Title }}</h1>
 </header>
+<blockquote>
+    <p><a href="/contact/">Send a message</a> to order your pastries today!</p>
+</blockquote>
 {{ .Content }}
 
 {{ range (.Pages.GroupByParam "menu_group") }}
@@ -19,9 +22,9 @@
     <h2 id="{{ .Key }}">{{ .Key | title }}</h2>
     {{ range .Pages }}
     <section class="my-16">
-        <h3 class="tc"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-        {{ if .Resources }}
-        <figure>
+        {{ if .Resources }}<figure>{{ end }}
+            <h3 class="tc"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            {{ if .Resources }}
             <a href="{{ .Permalink }}"><img {{ with .Resources }}
                     {{ with .GetMatch "{*.*,*.jpg,*.png,*.jpeg,*.JPG,*.PNG,*.JPEG}" }} src='{{ .Permalink }}' {{ end }}
                     {{ end }} {{ with .Params.ImgAlt }}alt="{{ . }}" {{ end }}
@@ -29,14 +32,17 @@
             <figcaption>
                 <p class="tc">{{ .Params.FigCaption }}</p>
             </figcaption>
+            {{ end }}
+            <p class="tc">{{ .Description }}</p>
+            <p class="cost-container">
+                {{ with .Params.Cost }}<span class="text-base tx-1">{{ . }}</span>{{ end }}
+                {{ with .Params.CostPerDozen }}<span class="text-base tx-1">{{ . }}</span>{{ end }}
+                {{ with .Params.CostPerHalfDozen }}<span class="text-base tx-1">{{ . }}</span>{{ end }}
+            </p>
+            {{ if .Resources }}
         </figure>
         {{ end }}
-        <p class="tc">{{ .Description }}</p>
-        <p class="cost-container">
-            {{ with .Params.Cost }}<span class="text-base tx-1">{{ . }}</span>{{ end }}
-            {{ with .Params.CostPerDozen }}<span class="text-base tx-1">{{ . }}</span>{{ end }}
-            {{ with .Params.CostPerHalfDozen }}<span class="text-base tx-1">{{ . }}</span>{{ end }}
-        </p>
+
     </section>
     {{ end }}
 </section>

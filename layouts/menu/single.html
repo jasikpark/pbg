@@ -12,32 +12,32 @@
 <header>
     <h1>{{ .Title }}</h1>
 </header>
-<section>
-    {{ .Content }}
-
-    <figure>
+<blockquote>
+    <p><a href="/contact/">Send a message</a> to order your pastries today!</p>
+</blockquote>
+{{ .Content }}
+<section class="my-16">
+    {{ if .Resources }}<figure>{{ end }}
+        {{ if .Resources }}
         <a href="{{ .Permalink }}"><img {{ with .Resources }}
                 {{ with .GetMatch "{*.*,*.jpg,*.png,*.jpeg,*.JPG,*.PNG,*.JPEG}" }} src='{{ .Permalink }}' {{ end }}
                 {{ end }} {{ with .Params.ImgAlt }}alt="{{ . }}" {{ end }} {{ with .Params.ImgTitle }}title="{{ . }}"
                 {{ end }} /></a>
         <figcaption>
-            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-
-            <p>{{ .Description }}</p>
-
+            <p class="tc">{{ .Params.FigCaption }}</p>
         </figcaption>
-    </figure>
-
-    <div>
+        {{ end }}
+        <p class="tc">{{ .Description }}</p>
         <p class="cost-container">
             {{ with .Params.Cost }}<span class="text-base tx-1">{{ . }}</span>{{ end }}
             {{ with .Params.CostPerDozen }}<span class="text-base tx-1">{{ . }}</span>{{ end }}
             {{ with .Params.CostPerHalfDozen }}<span class="text-base tx-1">{{ . }}</span>{{ end }}
         </p>
-    </div>
-    <div>
-        <h2 style="color:red">Nutritional Facts</h2>
-        <p>To be created</p>
-    </div>
+        {{ if .Resources }}
+    </figure>
+    {{ end }}
+
+    <h2 style="color:red">Nutritional Facts</h2>
+    <p>To be created</p>
 </section>
 {{ end }}
