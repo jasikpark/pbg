@@ -115,7 +115,7 @@ body > header ul {
 
 body > header ul:last-child {
   margin-bottom: 1.5rem;
-  display: hidden;
+  display: none;
 }
 
 @media all and (min-width: 480px) {
