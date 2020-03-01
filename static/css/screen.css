@@ -430,7 +430,7 @@ label {
 .about {
   background-color: var(--highlight);
   margin: 0 -1rem;
-  padding: 1rem 0;
+  padding: 1rem 1rem;
 }
 
 .about * {
