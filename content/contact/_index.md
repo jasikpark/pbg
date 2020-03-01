@@ -1,5 +1,5 @@
 +++
-title = "How to Order"
+title = "Contact Us"
 +++
 
 # Pastries By Grey
