@@ -15,8 +15,8 @@
   --grey-3: #595756;
   --grey-4: #424040;
   --black: #2b2523;
-  --serif: "Avenir Next", "nunito-sans", sans-serif;
-  --mono: "monaco", "source-code-pro", monospace;
+  --serif: "Avenir Next", "Nunito Sans", sans-serif;
+  --mono: "monaco", "Source Code Pro", monospace;
   --border-radius: 0.25rem;
   --hover-transition: all 150ms ease;
 }
