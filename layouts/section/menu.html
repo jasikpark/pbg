@@ -3,7 +3,7 @@
 {{ define "menu" }}
 <ul class="hidden-on-mobile">
     {{ range ($.Site.GetPage "taxonomyTerm" "menu_group").Pages }}
-    <li><a href="#{{ .Title }}">{{ .Title | title }}</a></li>
+    <li><a href="#{{ .Title | lower }}">{{ .Title | title }}</a></li>
     {{ end }}
 </ul>
 {{ end }}
