@@ -452,6 +452,7 @@ label {
   margin: 0 auto;
   height: 10rem;
   width: 10rem;
+  -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50%);
   position: absolute;
   left: calc(50% - 5rem);
