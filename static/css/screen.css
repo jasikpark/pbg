@@ -450,9 +450,9 @@ label {
 
 .about img {
   margin: 0 auto;
-  height: 11rem;
-  width: 11rem;
-  clip-path: circle(5rem at center);
+  height: 10rem;
+  width: 10rem;
+  clip-path: circle(50%);
   position: absolute;
   left: calc(50% - 5rem);
   top: -5rem;
