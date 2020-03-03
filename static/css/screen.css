@@ -344,6 +344,16 @@ label {
   padding-right: 0.25rem;
 }
 
+.px-8 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-16 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .mx-auto {
   margin-right: auto;
   margin-left: auto;
@@ -487,6 +497,20 @@ label {
   position: absolute;
   left: calc(50% - 6rem);
   top: -6rem;
+}
+
+@media all and (min-width: 600px) {
+  .menu-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2em;
+    max-width: calc(10rem + var(--max-width));
+    margin: 0 auto;
+  }
+  .menu-group > section {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 .cost-container {
