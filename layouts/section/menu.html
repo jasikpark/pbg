@@ -18,7 +18,7 @@
 {{ .Content }}
 
 {{ range (.Pages.GroupByParam "menu_group") }}
-<section class="px-8">
+<section>
     <h2 id="{{ .Key }}">{{ .Key | title }}</h2>
     <div class="menu-group">
         {{ range .Pages }}

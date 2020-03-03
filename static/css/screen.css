@@ -506,6 +506,7 @@ label {
     column-gap: 2em;
     max-width: calc(10rem + var(--max-width));
     margin: 0 auto;
+    padding: 0 2rem;
   }
   .menu-group > section {
     margin-top: 0;
