@@ -380,6 +380,10 @@ label {
   margin-bottom: 6rem;
 }
 
+.mt-24 {
+  margin-top: 6rem;
+}
+
 .my-28 {
   margin-top: 7rem;
   margin-bottom: 7rem;
@@ -465,7 +469,7 @@ label {
 
 .about {
   background-color: var(--highlight);
-  margin: 9rem -1rem;
+  margin: 8rem -1rem 0rem;
   padding: 1rem 1rem;
   position: relative;
 }
