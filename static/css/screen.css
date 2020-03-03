@@ -333,6 +333,11 @@ label {
   padding-right: 0.25rem;
 }
 
+.mx-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -352,6 +357,11 @@ label {
 
 .mb-16 {
   margin-bottom: 4rem;
+}
+
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .my-0 {
@@ -429,12 +439,23 @@ label {
 
 .about {
   background-color: var(--highlight);
-  margin: 0 -1rem;
+  margin: 7rem -1rem;
   padding: 1rem 1rem;
+  position: relative;
 }
 
 .about * {
   color: var(--highlight-complement);
+}
+
+.about img {
+  margin: 0 auto;
+  height: 11rem;
+  width: 11rem;
+  clip-path: circle(5rem at center);
+  position: absolute;
+  left: calc(50% - 5rem);
+  top: -5rem;
 }
 
 .cost-container {
