@@ -505,7 +505,7 @@ label {
     grid-template-columns: 1fr 1fr;
     column-gap: 2em;
     max-width: calc(10rem + var(--max-width));
-    margin: 0 auto;
+    margin: 2rem auto;
     padding: 0 2rem;
   }
   .menu-group > section {
