@@ -4,6 +4,11 @@
 <head>
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ with .Description }}
+    <meta name="description" content="{{ . }}" />
+    {{ else }}
+    <meta name="description" content="{{ .Site.Params.Description }}" />
+    {{ end }}
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,800,900|Source+Code+Pro&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/css/screen.css">
