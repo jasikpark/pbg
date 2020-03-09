@@ -113,6 +113,12 @@ body > header a {
   text-decoration: none;
 }
 
+body > header a:focus {
+  box-shadow: inset 0 0 0 2px #fff;
+  box-shadow: inset 0 0 0 2px var(--white);
+  outline: 0 !important;
+}
+
 body > header h1 {
   margin-bottom: 0;
   font-weight: 700;
