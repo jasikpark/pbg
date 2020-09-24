@@ -419,6 +419,10 @@ label {
   display: flex;
 }
 
+.space-x-2 > * + * {
+  padding-left: 0.5rem;
+}
+
 .tc {
   text-align: center;
 }
