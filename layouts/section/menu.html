@@ -26,10 +26,11 @@
             {{ if .Resources }}<figure class="my-0">{{ end }}
                 <h3 class="tc"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
                 {{ if .Resources }}
-                <a href="{{ .Permalink }}"><img {{ with .Resources }}
-                        {{ with .GetMatch "{*.*,*.jpg,*.png,*.jpeg,*.JPG,*.PNG,*.JPEG}" }} src='{{ .Permalink }}'
-                        {{ end }} {{ end }} {{ with .Params.ImgAlt }}alt="{{ . }}" {{ end }}
-                        {{ with .Params.ImgTitle }}title="{{ . }}" {{ end }} /></a>
+                <div class="menu-item"> <a href="{{ .Permalink }}"><img {{ with .Resources }}
+                            {{ with .GetMatch "{*.*,*.jpg,*.png,*.jpeg,*.JPG,*.PNG,*.JPEG}" }} src='{{ .Permalink }}'
+                            {{ end }} {{ end }} {{ with .Params.ImgAlt }}alt="{{ . }}" {{ end }}
+                            {{ with .Params.ImgTitle }}title="{{ . }}" {{ end }} /></a>
+                </div>
                 <figcaption>
                     <p class="tc">{{ with .Params.FigCaption }}{{ . }}{{ else }}{{ .Title }}{{ end }}</p>
                 </figcaption>

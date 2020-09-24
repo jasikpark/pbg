@@ -524,6 +524,20 @@ label {
   }
 }
 
+.menu-item {
+  overflow: hidden;
+  height: calc(282px + 5rem);
+}
+
+.menu-item img {
+  max-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
 .cost-container {
   display: flex;
   justify-content: center;
