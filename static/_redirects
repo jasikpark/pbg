@@ -1,9 +1,6 @@
 # These rules will change if you change your site’s custom domains or HTTPS settings
 
-# Redirect domain aliases to primary domain
-https://pastriesbygrey.jasik.xyz/* https://pastri.es/:splat 301!
-
 # Optional: Redirect default Netlify subdomain to primary domain
-https://pastriesbygrey.netlify.com/* https://pastri.es/:splat 301!
+https://pastriesbygrey.netlify.com/* https://pastriesbygrey.jasik.xyz/:splat 301!
 
-https://pastriesbygrey.netlify.app/* https://pastri.es/:splat 301!
+https://pastriesbygrey.netlify.app/* https://pastriesbygrey.jasik.xyz/:splat 301!
